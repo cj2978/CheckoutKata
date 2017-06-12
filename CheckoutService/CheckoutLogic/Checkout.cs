@@ -57,6 +57,8 @@ namespace CheckoutLogic
 
             if (itemDetails != null)
             {
+                int specialPriceMultiplier = itemDetails.SpecialPriceQty > 0 ? qty / itemDetails.SpecialPriceQty : 0;
+                int standardPriceMultiplier = qty - (specialPriceMultiplier * itemDetails.SpecialPriceQty);
 
             }
             else
