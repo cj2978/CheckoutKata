@@ -1,0 +1,4 @@
+C:\Users\Christopher\Documents\GitHub\CheckoutKata\CheckoutService\CheckoutService\bin\CheckoutService.dll
+C:\Users\Christopher\Documents\GitHub\CheckoutKata\CheckoutService\CheckoutService\bin\CheckoutService.pdb
+C:\Users\Christopher\Documents\GitHub\CheckoutKata\CheckoutService\CheckoutService\obj\Debug\CheckoutService.dll
+C:\Users\Christopher\Documents\GitHub\CheckoutKata\CheckoutService\CheckoutService\obj\Debug\CheckoutService.pdb
