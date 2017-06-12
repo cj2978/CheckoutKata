@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 
@@ -34,7 +35,7 @@ namespace CheckoutLogic
 
             foreach (char key in ITEMS.Keys)
             {
-                total += GetItemTotal(key.ToString(), ITEMS[key]);
+                total = total + GetItemTotal(key.ToString(), ITEMS[key]);
             }
 
             return total;
@@ -52,6 +53,18 @@ namespace CheckoutLogic
         {
             var itemTotal = 0;
 
+            Price itemDetails = PRICELIST.Find(x => x.SKU == sKU);
+
+            if (itemDetails != null)
+            {
+
+            }
+            else
+            {
+                string message = string.Format("No Price Found For {0}, Please Check Items Again", sKU);
+                throw new Exception(message);
+            }
+            
             return itemTotal;
         }
     }
