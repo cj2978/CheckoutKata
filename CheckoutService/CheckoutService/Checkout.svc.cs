@@ -6,12 +6,12 @@ namespace CheckoutService
     {
         public void Scan(string item)
         {
-            throw new NotImplementedException();
+            CheckoutLogic.Checkout.ScanItem(item);
         }
 
         public int GetTotalPrice()
         {
-            throw new NotImplementedException();
+            return CheckoutLogic.Checkout.GetTotal();
         }
     }
 }
