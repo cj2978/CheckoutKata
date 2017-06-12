@@ -7,7 +7,7 @@ namespace CheckoutLogic
     public static class Checkout
     {
         private static Dictionary<char, int> ITEMS = new Dictionary<char, int>();
-        private static List<Price> priceList = new List<Price>();
+        private static List<Price> PRICELIST = new List<Price>();
 
         public static void ScanItem(string item)
         {
@@ -32,6 +32,11 @@ namespace CheckoutLogic
 
             var total = 0;
 
+            foreach (char key in ITEMS.Keys)
+            {
+                total += GetItemTotal(key.ToString(), ITEMS[key]);
+            }
+
             return total;
         }
 
@@ -39,8 +44,15 @@ namespace CheckoutLogic
         {
             using (StreamReader reader = new StreamReader(@"C:\Users\Christopher\Documents\GitHub\CheckoutKata\CheckoutService\CheckoutService\bin\prices.json"))
             {
-                priceList = JsonConvert.DeserializeObject<List<Price>>(reader.ReadToEnd());
+                PRICELIST = JsonConvert.DeserializeObject<List<Price>>(reader.ReadToEnd());
             }
+        }
+
+        private static int GetItemTotal(string sKU, int qty)
+        {
+            var itemTotal = 0;
+
+            return itemTotal;
         }
     }
 }
