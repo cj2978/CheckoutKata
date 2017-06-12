@@ -5,3 +5,6 @@ C:\Users\Christopher\Documents\GitHub\CheckoutKata\CheckoutService\CheckoutServi
 C:\Users\Christopher\Documents\GitHub\CheckoutKata\CheckoutService\CheckoutService\bin\CheckoutLogic.dll
 C:\Users\Christopher\Documents\GitHub\CheckoutKata\CheckoutService\CheckoutService\bin\CheckoutLogic.pdb
 C:\Users\Christopher\Documents\GitHub\CheckoutKata\CheckoutService\CheckoutService\obj\Debug\CheckoutService.csprojResolveAssemblyReference.cache
+C:\Users\Christopher\Documents\GitHub\CheckoutKata\CheckoutService\CheckoutService\bin\Newtonsoft.Json.dll
+C:\Users\Christopher\Documents\GitHub\CheckoutKata\CheckoutService\CheckoutService\bin\Newtonsoft.Json.pdb
+C:\Users\Christopher\Documents\GitHub\CheckoutKata\CheckoutService\CheckoutService\bin\Newtonsoft.Json.xml
