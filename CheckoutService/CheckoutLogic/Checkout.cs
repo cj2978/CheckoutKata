@@ -60,6 +60,7 @@ namespace CheckoutLogic
                 int specialPriceMultiplier = itemDetails.SpecialPriceQty > 0 ? qty / itemDetails.SpecialPriceQty : 0;
                 int standardPriceMultiplier = qty - (specialPriceMultiplier * itemDetails.SpecialPriceQty);
 
+                itemTotal = (specialPriceMultiplier * itemDetails.SpecialPriceAmount) + (standardPriceMultiplier * itemDetails.UnitPrice);
             }
             else
             {
