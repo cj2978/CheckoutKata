@@ -6,7 +6,8 @@ namespace CheckoutLogic
 {
     public static class Checkout
     {
-        public static Dictionary<char, int> ITEMS = new Dictionary<char, int>();
+        private static Dictionary<char, int> ITEMS = new Dictionary<char, int>();
+        private static List<Price> priceList = new List<Price>();
 
         public static void ScanItem(string item)
         {
@@ -27,19 +28,19 @@ namespace CheckoutLogic
 
         public static int GetTotal()
         {
-            return 0;
+            GetPriceList();
+
+            var total = 0;
+
+            return total;
         }
 
-        private static List<Price> GetPriceList()
+        private static void GetPriceList()
         {
-            List<Price> priceList = new List<Price>();
-
-            using (StreamReader reader = new StreamReader("prices.json"))
+            using (StreamReader reader = new StreamReader(@"C:\Users\Christopher\Documents\GitHub\CheckoutKata\CheckoutService\CheckoutService\bin\prices.json"))
             {
                 priceList = JsonConvert.DeserializeObject<List<Price>>(reader.ReadToEnd());
             }
-
-            return priceList;
         }
     }
 }
